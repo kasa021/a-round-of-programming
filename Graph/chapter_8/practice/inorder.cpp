@@ -18,11 +18,8 @@ int main() {
     int p, l, r;
     cin >> p >> l >> r;
     g[p].push_back({ l, r });
-    cout<<g[p][0].left<<" "<<g[p][0].right<<endl;
   }
-  rep(i,n){
-    if(g[i].size()==0)g[i].push_back({-1,-1});
-  }
+
 
   vector<int> inorder;
   auto dfs = [&](auto self, int u) -> void {
